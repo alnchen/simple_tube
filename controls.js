@@ -42,32 +42,28 @@ function onYouTubePlayerAPIReady() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var paused = false;
-
   document.getElementById('prev').addEventListener('click', function() {
     player.previousVideo();
-    paused = false;
   })
 
   document.getElementById('play').addEventListener('click', function() {
-    if (paused) {
+    if (player.getPlayerState() == 2 || player.getPlayerState() == 0) {
       player.playVideo();
-      paused = !paused
     } else {
       player.pauseVideo()
-      paused = !paused
     }
   })
 
   document.getElementById('next').addEventListener('click', function() {
     player.nextVideo();
-    paused = false;
   })
+
 
   // shuffle button
   // document.getElementById('shuffle').addEventListener('click', function() {
   //   player.setShuffle({shufflePlaylist: true});
   // })
 
+  // future feature: change playlists on client side 
 
 });
