@@ -3,5 +3,20 @@ body {
 }
 
 #ytplayer {
+  display: flex;
   margin: 0 auto;
+  height: 360px;
+  width: 640px;
+}
+
+#controls {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#controls * {
+  padding: 20px;
+  background-color: grey;
+  border-radius: 30px;
 }
