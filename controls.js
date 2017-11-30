@@ -5,7 +5,8 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var playlists = {
   mcu: 'PL9mxgTZQwOFXGAVWdsxoZSGv3gnwr1cEb',
-  xmas: 'PLug2hRCycLDkDoppom1hjPO0tPc4T_shr'
+  xmas: 'PLug2hRCycLDkDoppom1hjPO0tPc4T_shr',
+  chineseOpera: 'PL32647390F8A5309F'
 };
 
 
@@ -36,15 +37,16 @@ function onYouTubePlayerAPIReady() {
       playsinline: 1,
       // allow js api control
       enablejsapi: 1
-    }
+    },
   });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  var paused = true;
+  var paused = false;
 
   document.getElementById('prev').addEventListener('click', function() {
-    player.pauseVideo();
+    player.previousVideo();
+    paused = false;
   })
 
   document.getElementById('play').addEventListener('click', function() {
@@ -59,9 +61,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
   document.getElementById('next').addEventListener('click', function() {
     player.nextVideo();
+    paused = false;
   })
 
-
+  // shuffle button
+  // document.getElementById('shuffle').addEventListener('click', function() {
+  //   player.setShuffle({shufflePlaylist: true});
+  // })
 
 
 });
