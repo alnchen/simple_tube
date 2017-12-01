@@ -8,6 +8,7 @@ setTimeout(function() {
   })
 
   document.getElementById('play').addEventListener('click', function() {
+    player.setShuffle({shufflePlaylist: true});
     if (player.getPlayerState() !== 1) {
       player.playVideo();
     } else {

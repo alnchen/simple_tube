@@ -18,7 +18,7 @@ function onYouTubePlayerAPIReady() {
     allowsInlineMediaPlayback: true,
     playerVars: {
       listType: 'playlist',
-      list: playlists.mcu,
+      list: playlists.chineseOpera,
       // autoplays the video (does not work on mobile)
       // autoplay: 1,
       // captions
