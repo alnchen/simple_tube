@@ -4,17 +4,18 @@
     <meta charset="utf-8">
     <link rel="icon" type="image/png" href="https://res.cloudinary.com/ac31624/image/upload/c_scale,w_70/v1512067556/youtube_icon_wfofvu.png" />
     <title>Simple Tube</title>
+    <script src="https://use.fontawesome.com/21c5eed226.js"></script>
     <link rel="stylesheet" type="text/css" href="stylesheet.css" >
-    <script src="controls.js"></script>
+    <script src="player.js" defer></script>
+    <script src="controls.js" defer></script>
   </head>
   <body>
     <div id="ytplayer"></div>
 
     <div id=controls>
-      <div id='prev' class='button'>PREV</div>
-      <div id='play' class='button'>PLAY/PAUSE</div>
-      <div id='next' class='button'>NEXT</div>
-      <!-- <div id='shuffle' class='button'>SHUFFLE</div> -->
+      <i id='prev' class="fa fa-backward fa-5x" aria-hidden="true"></i>
+      <i id='play' class="fa fa-circle-o fa-5x" aria-hidden="true"></i>
+      <i id='next' class="fa fa-forward fa-5x" aria-hidden="true"></i>
   </div>
   </body>
 </html>

@@ -1,26 +1,44 @@
 body {
   background-color: #efefef;
+  background-color: black;
+  /*padding: 15px;*/
+  padding: 0;
+  margin: 0;
 }
 
 #ytplayer {
   display: flex;
   margin: 0 auto;
-  height: 360px;
-  width: 640px;
+  width: 98vw;
+  height: 50vw;
+  max-height: 80vh;
 }
 
 #controls {
-  margin-top: 10px;
+  position: fixed;
+  bottom: 0px;
+  height: 20vh;
+  width: 100vw;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  /*background-color: grey;*/
 }
 
 #controls * {
-  padding: 20px;
-  background-color: white;
-  border-radius: 30px;
+  /*padding: 10px;*/
+  /*background-color: white;*/
+  /*border-radius: 30px;*/
 }
 
-#controls *:hover {
- cursor:pointer;
+.fa {
+  font-size: 16vh;
+  background-color: black;
+  color: white;
+  margin-bottom: 3vh;
+  margin-top: 1vh;
+}
+
+.fa *:hover {
+  cursor:pointer;
 }
